@@ -17,4 +17,3 @@ export * from "./string/is-string";
 export * from "./string/repeat";
 export * from "./string/string-size";
 export * from "./string/titlecase";
-

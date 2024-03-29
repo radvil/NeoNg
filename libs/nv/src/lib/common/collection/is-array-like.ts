@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { isLength } from '../number/is-length';
+import { isLength } from "../number/is-length";
 
 /**
  * Checks if `value` is array-like. A value is considered array-like if it's
@@ -16,9 +15,13 @@ import { isLength } from '../number/is-length';
  *
  * isArrayLike('abc') // true
  */
-export const isArrayLike = (value: any): boolean => {
+export const isArrayLike = (value: unknown): value is ArrayLike<unknown> => {
   return (
-    value !== null && typeof value !== 'function' && isLength(value.length)
+    (value !== undefined &&
+      typeof value === "object" &&
+      value !== null &&
+      typeof value !== "function") ||
+    Array.isArray(value) ||
+    (typeof value === "string" && isLength(value.length))
   );
 };
-

@@ -14,20 +14,14 @@
     "declaration": false,
     "experimentalDecorators": true,
     "paths": {
-      "nv": [
-        "./dist/nv",
-        "./dist/nv"
-      ]
+      "nv": ["./dist/nv", "./dist/nv"]
     },
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -1,4 +1,4 @@
-import { capitalize } from './capitalize';
+import { capitalize } from "./capitalize";
 
 /**
  * Converts the first letter of a each word of a sentence to uppercase
@@ -8,10 +8,9 @@ import { capitalize } from './capitalize';
  * titlecase('the quick brown fox') // 'The Quick Brown Fox'
  */
 export const titlecase = (value: string | undefined | null): string => {
-  if (!value) return '';
+  if (!value) return "";
   return value
-    .split(' ')
+    .split(" ")
     .map((word) => capitalize(word))
-    .join(' ');
+    .join(" ");
 };
-

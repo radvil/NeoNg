@@ -1,11 +1,6 @@
-import { getProtoTag } from '../../_utils/get-proto-tag';
-import { isArrayLike } from './is-array-like';
-import { isString } from '../string/is-string';
-import { stringSize } from '../string/string-size';
-
-/** `Object#toString` result references. */
-const mapTag = '[object Map]';
-const setTag = '[object Set]';
+import { isArrayLike } from "./is-array-like";
+import { isString } from "../string/is-string";
+import { stringSize } from "../string/string-size";
 
 /**
  * Gets the size of `collection` by returning its length for array-like
@@ -19,17 +14,15 @@ const setTag = '[object Set]';
  *
  * size('neo') // 3
  */
-export const size = (collection: any): number => {
+export const size = (collection: unknown): number => {
   if (collection == null) {
     return 0;
   }
   if (isArrayLike(collection)) {
     return isString(collection) ? stringSize(collection) : collection.length;
   }
-  const tag = getProtoTag(collection);
-  if (tag === mapTag || tag === setTag) {
+  if (collection instanceof Map || collection instanceof Set) {
     return collection.size;
   }
   return Object.keys(collection).length;
 };
-

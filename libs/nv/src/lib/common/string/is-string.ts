@@ -1,5 +1,3 @@
-import { getProtoTag } from "../../_utils/get-proto-tag";
-
 /**
  * Checks if `value` is classified as a `String` primitive or object.
  *
@@ -9,14 +7,12 @@ import { getProtoTag } from "../../_utils/get-proto-tag";
  *
  * isString(1) // false
  */
-export const isString = (value: any): boolean => {
-  const type = typeof value;
+export const isString = (v: unknown): v is string => {
   return (
-    type === 'string' ||
-    (type === 'object' &&
-      value != null &&
-      !Array.isArray(value) &&
-      getProtoTag(value) === '[object String]')
+    typeof v === "string" ||
+    (typeof v === "object" &&
+      v != null &&
+      !Array.isArray(v) &&
+      Object.prototype.toString.call(v) === "[object String]")
   );
 };
-

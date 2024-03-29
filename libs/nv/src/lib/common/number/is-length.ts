@@ -14,13 +14,11 @@
  *
  * isLength('3') => false
  */
-export const isLength = (value: any) => {
+export const isLength = (value: unknown) => {
   return (
-    typeof value === 'number' &&
+    typeof value === "number" &&
     value > -1 &&
     value % 1 === 0 &&
     value <= Number.MAX_SAFE_INTEGER
   );
 };
-
-
