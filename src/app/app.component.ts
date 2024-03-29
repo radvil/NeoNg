@@ -2,14 +2,11 @@ import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 
 @Component({
-  selector: "neo-root",
   standalone: true,
+  selector: "neo-root",
   imports: [RouterOutlet],
   template: `
-    <h1>Welcome to {{title}}!</h1>
     <router-outlet />
   `,
 })
-export class AppComponent {
-  title = "neong";
-}
+export class AppComponent {}
