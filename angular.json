@@ -98,33 +98,25 @@
         }
       }
     },
-    "nv": {
+    "@neo/utils": {
       "projectType": "library",
-      "root": "libs/nv",
-      "sourceRoot": "libs/nv/src",
-      "prefix": "lib",
+      "root": "@neo/utils",
+      "sourceRoot": "@neo/utils/src",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "libs/nv/ng-package.json"
+            "project": "@neo/utils/project.json"
           },
           "configurations": {
-            "production": {
-              "tsConfig": "libs/nv/tsconfig.lib.prod.json"
-            },
             "development": {
-              "tsConfig": "libs/nv/tsconfig.lib.json"
+              "tsConfig": "@neo/utils/tsconfig.lib.json"
+            },
+            "production": {
+              "tsConfig": "@neo/utils/tsconfig.lib.prod.json"
             }
           },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "tsConfig": "libs/nv/tsconfig.spec.json",
-            "polyfills": ["zone.js", "zone.js/testing"]
-          }
+          "defaultConfiguration": "development"
         }
       }
     }

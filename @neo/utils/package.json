@@ -1,0 +1,8 @@
+{
+  "name": "@neo/utils",
+  "version": "0.0.1",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

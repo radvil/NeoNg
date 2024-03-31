@@ -11,6 +11,14 @@ export * from "./collection/size";
  * number
  */
 export * from "./number/is-length";
+export * from "./number/restrict-in-range";
+export * from "./number/is-prime";
+export * from "./number/generate-primes";
+
+/**
+ * object
+ */
+export * from "./object/ensure-as-func";
 
 /**
  * string
