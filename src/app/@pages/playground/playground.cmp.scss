@@ -1,13 +1,41 @@
-.material-button {
-  background-color: #f00;
-  color: #fff;
+.buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.btn {
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  cursor: pointer;
   font-size: 16px;
   transition: all 0.3s;
+  font-weight: bold;
+  cursor: pointer;
+
+  &.danger {
+    background-color: #f00;
+    color: #fff;
+  }
+
+  &.info {
+    background-color: #ff00ff;
+    color: #fff;
+  }
+
+  &.warn {
+    background-color: #ffff00;
+    color: #212121;
+  }
+
+  &.success {
+    background-color: #00DE6C;
+    color: #212121;
+  }
+
   &:hover {
     background-color: #000;
+    color: #fff;
   }
 }

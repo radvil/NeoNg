@@ -13,10 +13,19 @@
   <li>repeat 3x: <b>{{ name3x() }}</b></li>
 </ol>
 
-<button (click)="gen()" type="button" class="material-button">
-  Test
-</button>
+<div class="buttons-container">
+  <button (click)="lazy()" type="button" class="btn info">
+    Lazy
+  </button>
+  <button (click)="eager()" type="button" class="btn danger">
+    Eager
+  </button>
+  <button (click)="reactiveX()" type="button" class="btn warn">
+    ReactiveX
+  </button>
+  <!-- <button (click)="signalValues()" type="button" class="btn success"> -->
+  <!--   Signal -->
+  <!-- </button> -->
+</div>
 
-<h1>
-  Total Prime Numbers: {{ totalPrimNumbers() }}
-</h1>
+<h1>Logs: {{ logs() | json }}</h1>
