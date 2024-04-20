@@ -12,11 +12,13 @@ export * from "./collection/size";
  */
 export * from "./number/count-in-range";
 export * from "./number/generate-primes";
+export * from "./number/is-even";
 export * from "./number/is-length";
+export * from "./number/is-odd";
+export * from "./number/is-power-of-two";
 export * from "./number/is-prime";
 export * from "./number/random-numbers";
 export * from "./number/restrict-in-range";
-export * from "./number/is-power-of-two";
 
 /**
  * object
