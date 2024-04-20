@@ -1,9 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  computed,
-  signal,
-} from "@angular/core";
+import { ChangeDetectionStrategy, Component, computed, signal } from "@angular/core";
 import { it, v } from "@neo/utils";
 import { filter, map, range, toArray } from "rxjs";
 import { JsonPipe } from "@angular/common";
@@ -19,11 +14,7 @@ import { JsonPipe } from "@angular/common";
  * you might need to use decorators or other advanced TypeScript features1.
  */
 function AnnotateName(severity: "log" | "warn" | "error" = "log") {
-  return function (
-    _: any,
-    name: string | symbol,
-    descriptor: PropertyDescriptor,
-  ) {
+  return function (_: any, name: string | symbol, descriptor: PropertyDescriptor) {
     const originalMethod = descriptor.value;
     descriptor.value = function (...args: any[]) {
       console[severity](`Calling Method: ${String(name)}`);
@@ -48,7 +39,7 @@ const V = {
   imports: [JsonPipe],
 })
 export class PlaygroundCmp {
-  readonly name = signal("injoker 🎲 madafaka");
+  readonly name = signal("some🎲");
   readonly nameIsArrayLike = computed(() => v.isArrayLike(this.name()));
   readonly nameHasUnicode = computed(() => v.hasUnicode(this.name()));
   readonly nameUnicodeSize = computed(() => v.unicodeSize(this.name()));
@@ -100,9 +91,7 @@ export class PlaygroundCmp {
   lazy(): void {
     this.measure(() => {
       this.logs.update((x) => {
-        x["lazy"] = this.collectNumbers(
-          it.range(V.RangeMin, V.RangeMax),
-        ).length;
+        x["lazy"] = this.collectNumbers(it.range(V.RangeMin, V.RangeMax)).length;
         return x;
       });
     });
@@ -124,5 +113,7 @@ export class PlaygroundCmp {
     console.warn(this.logs());
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(v.getIterator(["a", "b"]));
+  }
 }

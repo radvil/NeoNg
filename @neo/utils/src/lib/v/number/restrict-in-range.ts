@@ -1,4 +1,5 @@
 /*
+ * TODO: check this!
  * return the clamped value within the specified range,
  * ensuring that it is greater than or equal to the minimum value
  * and less than or equal to the maximum value.
