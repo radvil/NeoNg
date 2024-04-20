@@ -1,4 +1,4 @@
-# Neong Web Dev Reusable Utils and components
+# NeoNg Web Dev Reusable Utils and components
 
 Just my custom utilities/functions and UI components that'll gonna help me later :)
 
