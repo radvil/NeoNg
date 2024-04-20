@@ -10,10 +10,13 @@ export * from "./collection/size";
 /**
  * number
  */
-export * from "./number/is-length";
-export * from "./number/restrict-in-range";
-export * from "./number/is-prime";
+export * from "./number/count-in-range";
 export * from "./number/generate-primes";
+export * from "./number/is-length";
+export * from "./number/is-prime";
+export * from "./number/random-numbers";
+export * from "./number/restrict-in-range";
+export * from "./number/is-power-of-two";
 
 /**
  * object
@@ -30,3 +33,8 @@ export * from "./string/repeat";
 export * from "./string/string-size";
 export * from "./string/titlecase";
 export * from "./string/unicode-size";
+
+/**
+ * misc
+ */
+export * from "./misc/swap-2-variables";
